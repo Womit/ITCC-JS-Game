@@ -1,0 +1,21 @@
+button {
+    display: button;
+
+}
+
+h1 {
+    padding: 10px;
+    padding-left: 30px
+}
+
+p.introduction {
+    padding: 10px;
+    padding-left: 30px;
+    margin-top: 10px;   
+}
+
+button.refresh {
+    padding: 10px;
+    margin: 1em;
+    
+}
