@@ -11,7 +11,12 @@ class Spike {
     }   
     
     show() {
-        image(sImg, this.x, this.y, this.r, this.r);
+        if (level == 1) {
+            image(sImg, this.x, this.y, this.r, this.r);
+        } else if (level == 2) {
+            image(ssImg, this.x, this.y, this.r, this.r);
+        }
+        
     }
 
     update() {

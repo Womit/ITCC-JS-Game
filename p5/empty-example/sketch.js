@@ -75,8 +75,7 @@ function draw() { //funtion to draw out the background, player and spikes - also
     break;
 
     case 2:
-      runGame(2);
-      background(bbImg);
+      runGame(1);
     break;
   }
 }
@@ -98,6 +97,16 @@ function testLevel() {
 
 function runGame() {
   testLevel();
+
+  if(level == 1) {
+    background(bImg);
+    textSize(24);
+    text(`Score : ${score}`, 10, 30);
+  } else if(level == 2) {
+    background(bbImg);
+    textSize(24);
+    text(`Score : ${score}`, 10, 30);
+  }
 
   player.show();
   player.move(); 

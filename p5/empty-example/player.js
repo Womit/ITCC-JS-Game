@@ -21,7 +21,12 @@ class Player {
     }
 
     show () {
-        image(pImg, this.x, this.y, this.r, this.r);
+        if (level == 1) {
+           image(pImg, this.x, this.y, this.r, this.r); 
+        } else if (level == 2) {
+            image(ppImg, this.x, this.y, this.r, this.r); 
+        }
+        
     }
 
     passes(spike) {
