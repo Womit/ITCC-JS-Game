@@ -100,7 +100,7 @@ function testLevel() {
       if (score >= 10) {
         level = 2;
       } else {
-        if (score == 20) {
+        if (score >= 20) {
           level = 3;
         }
       }
