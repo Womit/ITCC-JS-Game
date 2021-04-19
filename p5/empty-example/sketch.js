@@ -37,7 +37,7 @@ function preload() { // function to preload my sprites
 function setup() { // fucntion to set up the game
    createCanvas(1000,700)
    player = new Player();
-   player2 = new Player2();
+  
 
    soundFormats('mp3');
    //boing = loadSound('sounds/boing.mp3')
@@ -78,7 +78,8 @@ function draw() { //funtion to draw out the background, player and spikes - also
     case 2:
       runGame(2);
       background(bbImg);
-      player2 = new Player();
+      player2.show();
+      player2.move();
 
     break;
   }
@@ -93,6 +94,7 @@ function testLevel() {
     } else {
       if (score >= 3) {
         level = 2;
+        
       }
     }
   }  
