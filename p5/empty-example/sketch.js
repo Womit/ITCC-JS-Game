@@ -89,16 +89,6 @@ function testLevel() {
     } else {
       if (score >= 10) {
         level = 2;
-      } else {
-        if (score >= 20) {
-          background(0, 0, 0);
-          fill(255);
-          textSize(48);
-          text("YOU WIN!", width/2 - 125, height/2 );
-          textSize(38)
-          textSize(28);
-          text("Press ENTER to again", width/2 -105, height/2 +50);
-        }
       }
     }
   }  
@@ -134,6 +124,9 @@ function runGame() {
     }
     if (player.passes(spike)) { //statememnt that adds the players score when passing 
       score++;
+    }
+    if (score > 20) {
+      gameWin();
     }
   }
   if (counter % 70 == 0 || random(1) < 0.007) {
@@ -172,6 +165,17 @@ function gameOver() {
   textSize(38)
   textSize(28);
   text("Press ENTER to play again", width/2 -140, height/2 +50);
+  noLoop();
+}
+
+function gameWin() {
+  background(0, 0, 0);
+  fill(255);
+  textSize(48);
+  text("YOU WIN!", width/2 - 125, height/2 );
+  textSize(38)
+  textSize(28);
+  text("Press ENTER to again", width/2 -105, height/2 +50);
   noLoop();
 }
 
