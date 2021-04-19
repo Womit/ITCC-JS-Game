@@ -119,17 +119,17 @@ function runGame() { //running the game, showing the characters and setting the 
       thud.play();
       gameOver();
     }
-    if (spike.over()) {
+    if (spike.over()) { //to recognise that player has jumped over the spike
       spikes.splice(i, 1);
     }
     if (player.passes(spike)) { //statememnt that adds the players score when passing 
       score++;
     }
-    if (score > 5) {
+    if (score > 20) { //to bring up the winning screen when reaching score of 20 or more
       gameWin();
     }
   }
-  if (counter % 70 == 0 || random(1) < 0.007) {
+  if (counter % 70 == 0 || random(1) < 0.007) { //to randomly add a spike to the game after every random interval
     addSpike();
   }
   counter++;
@@ -142,7 +142,7 @@ function addSpike() { ///function to push new spike enemys out
 
 
 function keyPressed() { //function to control the player to jump everytime space is pressed
-  if(keyCode == ENTER) {
+  if(keyCode == ENTER) { //button to start, restart or play game again
     player = new Player();
     level = 1;
     spikes = [];
@@ -151,13 +151,13 @@ function keyPressed() { //function to control the player to jump everytime space
     loop();
   }
   
-  if (key == ' ') {
+  if (key == ' ') { //declaring space bar to make player jump
     player.jump();
     boing.play();
   }
 }
 
-function gameOver() {
+function gameOver() { //screen to pop up when ;layer has collided with enemy
   background(0);
   fill(255);
   textSize(48);
@@ -168,7 +168,7 @@ function gameOver() {
   noLoop();
 }
 
-function gameWin() {
+function gameWin() { //screen to pop up when player has passed 20
   background(0, 0, 0);
   fill(255);
   textSize(48);
