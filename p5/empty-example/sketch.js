@@ -77,6 +77,16 @@ function draw() { //funtion to draw out the background, player and spikes - also
     case 2:
       runGame(1);
     break;
+
+    case 3:
+      background(0, 0, 0);
+      fill(255);
+      textSize(48);
+      text("YOU WIN!", width/2 - 125, height/2 );
+      textSize(38)
+      textSize(28);
+      text("Press ENTER to again", width/2 -105, height/2 +50);
+    break;
   }
 }
 
@@ -89,7 +99,10 @@ function testLevel() {
     } else {
       if (score >= 3) {
         level = 2;
-        
+      } else {
+        if (score == 20) {
+          level = 3;
+        }
       }
     }
   }  
