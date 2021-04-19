@@ -79,6 +79,17 @@ function testLevel() {
   }  
 }
 
+function gameOver() {
+  background(0);
+  fill(255);
+  textSize(48);
+  text("GAME OVER", width/2 - 125, height/2,);
+  textSize(38)
+  textSize(28);
+  text("Press ENTER to play again", width/2 -140, height/2 +50);
+  noLoop();
+}
+
 function runGame() {
   //testLevel();
 
@@ -133,13 +144,4 @@ function refresh() { //funciton to refresh the sketch when failed the level
   window.location.reload();
 }
 
-function gameOver() {
-  background(0, 0, 0);
-  fill(255);
-  textSize(48);
-  text("GAME OVER", width/2 - 125, height/2,);
-  textSize(38)
-  textSize(28);
-  text("Press ENTER to play again", width/2 -140, height/2 +50);
-  noLoop();
-}
+
