@@ -119,6 +119,7 @@ function keyPressed() { //function to control the player to jump everytime space
     spikes = [];
     score = 0;
     console.log("Start");
+    loop();
   }
   
   if (key == ' ') {
