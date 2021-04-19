@@ -7,7 +7,12 @@ class Spike {
     }
     
     move() {
-        this.x -= 14;
+        if (level == 1) {
+           this.x -= 14; 
+        } else if (level == 2) {
+            this.x -=20;
+        }
+        
     }   
     
     show() {
