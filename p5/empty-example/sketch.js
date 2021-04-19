@@ -65,6 +65,10 @@ function draw() { //funtion to draw out the background, player and spikes - also
     case 1:
       runGame(1);
     break;
+
+    case 2:
+      runGame(2);
+    break;
   }
 }
 
