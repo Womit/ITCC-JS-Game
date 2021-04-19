@@ -1,9 +1,14 @@
 //global variables
 
-//sprites
+//sprites - level 1
 let pImg;
 let bImg;
 let sImg;
+
+//sprites - level 2
+let ppImg;
+let bbImg;
+let ssImg;
 
 //game rules and characters
 let player;
@@ -23,7 +28,9 @@ function preload() { // function to preload my sprites
   pImg = loadImage('sprites/player_stand.png');
   bImg = loadImage('sprites/backgroundColorForest.png');
   sImg = loadImage('sprites/spikeMan_stand.png');
-  eImg = loadImage('sprites/flyMan_fly.png');
+  ppImg = loadImage('sprites/adventurer_idle.png');
+  bbImg = loadImage('sprites/backgroundColorFall.png');
+  ssImg = loadImage('sprites/flyMan_fly.png');
 }
 
 function setup() { // fucntion to set up the game
@@ -68,6 +75,7 @@ function draw() { //funtion to draw out the background, player and spikes - also
 
     case 2:
       runGame(2);
+      //background(bbImg);
     break;
   }
 }
