@@ -39,7 +39,7 @@ function setup() { // fucntion to set up the game
   
 
    soundFormats('mp3');
-   //boing = loadSound('sounds/boing.mp3')
+   boing = loadSound('sounds/boing.mp3')
    thud = loadSound('sounds/thud.mp3') 
 }
 
@@ -49,8 +49,8 @@ function draw() { //funtion to draw out the background, player and spikes - also
   textSize(24);
   text(`Score : ${score}`, 10, 30);
 
-  switch(level){
-    case -1:
+  switch(level){ // senarios within the game to determin the case for each level
+    case -1: //game lost screen
       background(0, 0, 0);
       fill(255);
       textSize(48);
@@ -60,7 +60,7 @@ function draw() { //funtion to draw out the background, player and spikes - also
       text("Press ENTER to play again", width/2 -140, height/2 +50);
     break;
 
-    case 0:
+    case 0: //starting screen
       background(0, 0, 0);
       fill(255);
       textSize(48);
@@ -70,34 +70,34 @@ function draw() { //funtion to draw out the background, player and spikes - also
       text("Press ENTER to play", width/2 -105, height/2 +50);
     break;
 
-    case 1:
+    case 1: //running level 1
       runGame(1);
     break;
 
-    case 2:
+    case 2: //running level 2
       runGame(1);
     break;
   }
 }
 
-function testLevel() {
-  if(score <= 0) {
+function testLevel() { //testing the game parameters to chnage the level according to the score
+  if(score <= 0) { //starting game
     level = 1;
   } else {
-    if (score <= 0) {
+    if (score <= 0) { //playig level 1
       level = 1;
     } else {
-      if (score >= 10) {
+      if (score >= 2) { //playing level 2
         level = 2;
       }
     }
   }  
 }
 
-function runGame() {
-  testLevel();
+function runGame() { //running the game, showing the characters and setting the rules of the game
+  testLevel(); //called to test to see what level the game such play
 
-  if(level == 1) {
+  if(level == 1) { // statement to test wheher the background image should chnage according to what level is being played and score 
     background(bImg);
     textSize(24);
     text(`Score : ${score}`, 10, 30);
@@ -110,7 +110,7 @@ function runGame() {
   player.show();
   player.move(); 
 
-  for(let i = spikes.length - 1; i >= 0; i--) {
+  for(let i = spikes.length - 1; i >= 0; i--) { //statement to add the spikes to the game and to keep spawning them in
     let spike = spikes[i];
     spike.show();
     spike.move();
@@ -125,7 +125,7 @@ function runGame() {
     if (player.passes(spike)) { //statememnt that adds the players score when passing 
       score++;
     }
-    if (score > 20) {
+    if (score > 5) {
       gameWin();
     }
   }
@@ -175,7 +175,7 @@ function gameWin() {
   text("YOU WIN!", width/2 - 125, height/2 );
   textSize(38)
   textSize(28);
-  text("Press ENTER to again", width/2 -105, height/2 +50);
+  text("Press ENTER to play again", width/2 -105, height/2 +50);
   noLoop();
 }
 
