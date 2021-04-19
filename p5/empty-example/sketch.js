@@ -1,12 +1,17 @@
 //global variables
+
+//sprites
 let pImg;
 let bImg;
 let sImg;
+
+//game rules and characters
 let player;
 let spikes = [];
 let counter = 1;
 let score = 0;
 let level = 0;
+
 //sounds
 let boing;
 let thud;
