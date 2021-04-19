@@ -12,7 +12,6 @@ let ssImg;
 
 //game rules and characters
 let player;
-let player2;
 let spikes = [];
 let counter = 1;
 let score = 0;
@@ -78,9 +77,6 @@ function draw() { //funtion to draw out the background, player and spikes - also
     case 2:
       runGame(2);
       background(bbImg);
-      player2.show();
-      player2.move();
-
     break;
   }
 }
