@@ -51,10 +51,10 @@ function draw() { //funtion to draw out the background, player and spikes - also
       background(0, 0, 0);
       fill(255);
       textSize(48);
-      text("GAME START", width/2 - 125, height/2,);
+      text("GAME START", width/2 - 125, height/2 );
       textSize(38)
       textSize(28);
-      text("Press ENTER to play", width/2 -110, height/2 +50);
+      text("Press ENTER to play", width/2 -105, height/2 +50);
     break;
 
     case 1:
