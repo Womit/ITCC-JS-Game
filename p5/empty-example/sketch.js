@@ -94,10 +94,10 @@ function testLevel() {
   if(score <= 0) {
     level = 1;
   } else {
-    if (score <= 2) {
+    if (score <= 0) {
       level = 1;
     } else {
-      if (score >= 3) {
+      if (score >= 10) {
         level = 2;
       } else {
         if (score == 20) {
