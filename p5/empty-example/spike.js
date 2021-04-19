@@ -32,7 +32,7 @@ class Spike {
         return this.x <0;
     }
 
-    hits(player) { //collide rule for collide library
+    hits(player) { //collide rule from collide library
         return collideRectRect(this.x, this.y, this.r, this.r, player.x, player.y, player.r, player.r);
     }
 }
