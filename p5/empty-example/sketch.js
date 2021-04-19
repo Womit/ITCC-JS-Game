@@ -31,7 +31,10 @@ function setup() { // fucntion to set up the game
 }
 
 function draw() { //funtion to draw out the background, player and spikes - also to let spike keep spawning in
-  
+  text(frameRate(), width/2, height/2);
+  background(bImg);
+  textSize(24);
+  text(`Score : ${score}`, 10, 30);
   
   switch(level){
     case -1:
@@ -59,10 +62,7 @@ function draw() { //funtion to draw out the background, player and spikes - also
     break;
 
   }
-  text(frameRate(), width/2, height/2);
-  background(bImg);
-  textSize(24);
-  text(`Score : ${score}`, 10, 30);
+   
 }
 
 function testLevel() {
