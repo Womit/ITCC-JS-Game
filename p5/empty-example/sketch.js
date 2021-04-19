@@ -11,7 +11,7 @@ let level = 0;
 let boing;
 let thud;
 
-var timerValue = 10;
+//var timerValue = 10;
 
 
 function preload() { // function to preload my sprites
@@ -35,7 +35,7 @@ function draw() { //funtion to draw out the background, player and spikes - also
   background(bImg);
   textSize(24);
   text(`Score : ${score}`, 10, 30);
-  
+
   switch(level){
     case -1:
       background(0, 0, 0);
@@ -60,9 +60,7 @@ function draw() { //funtion to draw out the background, player and spikes - also
     case 1:
       runGame(1);
     break;
-
   }
-   
 }
 
 function testLevel() {
@@ -79,19 +77,11 @@ function testLevel() {
   }  
 }
 
-function gameOver() {
-  background(0);
-  fill(255);
-  textSize(48);
-  text("GAME OVER", width/2 - 125, height/2,);
-  textSize(38)
-  textSize(28);
-  text("Press ENTER to play again", width/2 -140, height/2 +50);
-  noLoop();
-}
-
 function runGame() {
   //testLevel();
+
+  player.show();
+  player.move(); 
 
   for(let i = spikes.length - 1; i >= 0; i--) {
     let spike = spikes[i];
@@ -113,9 +103,6 @@ function runGame() {
     addSpike();
   }
   counter++;
-
-  player.show();
-  player.move();
 }
 
 
@@ -138,6 +125,17 @@ function keyPressed() { //function to control the player to jump everytime space
     player.jump();
     boing.play();
   }
+}
+
+function gameOver() {
+  background(0);
+  fill(255);
+  textSize(48);
+  text("GAME OVER", width/2 - 125, height/2,);
+  textSize(38)
+  textSize(28);
+  text("Press ENTER to play again", width/2 -140, height/2 +50);
+  noLoop();
 }
 
 function refresh() { //funciton to refresh the sketch when failed the level
