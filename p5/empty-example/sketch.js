@@ -12,6 +12,7 @@ let ssImg;
 
 //game rules and characters
 let player;
+let player2;
 let spikes = [];
 let counter = 1;
 let score = 0;
@@ -36,6 +37,7 @@ function preload() { // function to preload my sprites
 function setup() { // fucntion to set up the game
    createCanvas(1000,700)
    player = new Player();
+   player2 = new Player2();
 
    soundFormats('mp3');
    //boing = loadSound('sounds/boing.mp3')
@@ -75,19 +77,21 @@ function draw() { //funtion to draw out the background, player and spikes - also
 
     case 2:
       runGame(2);
-      //background(bbImg);
+      background(bbImg);
+      player2 = new Player();
+
     break;
   }
 }
 
 function testLevel() {
   if(score <= 0) {
-    level = -1;
+    level = 1;
   } else {
-    if (score <= 9) {
+    if (score <= 2) {
       level = 1;
     } else {
-      if (score >= 10) {
+      if (score >= 3) {
         level = 2;
       }
     }
@@ -95,7 +99,7 @@ function testLevel() {
 }
 
 function runGame() {
-  //testLevel();
+  testLevel();
 
   player.show();
   player.move(); 
@@ -158,5 +162,6 @@ function gameOver() {
 function refresh() { //funciton to refresh the sketch when failed the level
   window.location.reload();
 }
+
 
 
