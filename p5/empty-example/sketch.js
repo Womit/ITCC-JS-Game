@@ -34,7 +34,7 @@ function preload() { // function to preload my sprites
 }
 
 function setup() { // fucntion to set up the game
-   createCanvas(1000,700)
+   createCanvas(1000,620)
    player = new Player();
   
 

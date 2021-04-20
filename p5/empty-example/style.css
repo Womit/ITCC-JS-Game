@@ -14,5 +14,8 @@ p {
 }
 
 canvas {
-    padding-left: 10rem;;
+    margin-top: 4em;
+    margin-left: 12em;
+    align-content: center;
+    margin-bottom: 1em;
 }
