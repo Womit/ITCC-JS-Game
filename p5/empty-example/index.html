@@ -24,17 +24,73 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
   
-  <h1>Spike Jump</h1>
-  <p class="introduction">The game that's oddly similar to the Google Chrome Dinosaur game...</p>
-  <p class="introduction">Press Spacebar to jump</p>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="images/player_jump.png" alt="" width="40" height="45">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Pricing</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  
+  <h1>Hopper - Home</h1> 
 </head>
-
 <body>
   <main>
-    <button class="refresh" onclick="window.location.reload();"Refresh Page>Reset Level</button>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+      <h2>About the Game</h2>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-8">
+         <p class="">This game is a simple hopper game. The aim of the game is to score 20 points by jumping 
+        over enemies. If you fail and get hit by an enemy you lose and have to restart :( </p> 
+        </div>
+        <div class="col-8">
+          <p> The inspiration behind this game is from the Google Chrome Dinosaur Hopper game. I thought
+          it would be a fun game to use as a baseline and change some of the rules and the art style too.
+          I thought it would be fun to use my own sprites for the character and enemy in the game along
+          with the background. The game from Chrome was very quiet every time I played it so I decided
+          to add my own sounds to my version. </p>  
+        </div>
+      <div class="col-4">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <img src="..." class="card-img-top" alt="...">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </main>
+
+  <footer  class="footer mt-auto py-3 bg-dark">
+    <div class="container">
+        <span class="text-muted">All Rights Reserved, Ryan Brereton</span>
+    </div>
+  </footer>
 </body>
 
 </html>
