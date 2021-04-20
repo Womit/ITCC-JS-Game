@@ -87,7 +87,7 @@ function testLevel() { //testing the game parameters to chnage the level accordi
     if (score <= 0) { //playig level 1
       level = 1;
     } else {
-      if (score >= 2) { //playing level 2
+      if (score >= 9) { //playing level 2
         level = 2;
       }
     }
