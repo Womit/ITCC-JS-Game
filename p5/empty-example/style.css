@@ -5,10 +5,14 @@ h1 {
 }
 
 h2 {
-    padding: 10px;
-    padding-left: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
 }
 
 p {
     padding-left: 15px;
+}
+
+canvas.defaultcanvas0 {
+    padding-left: 10rem;;
 }
