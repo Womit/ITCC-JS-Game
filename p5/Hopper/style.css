@@ -1,0 +1,23 @@
+h1 {
+    margin: 50px;
+}
+
+h3 {
+    margin-left: 50px;
+}
+
+p {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+canvas {
+    margin-top: 50px;
+    margin-left: 245px;
+}
+
+.card {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+   

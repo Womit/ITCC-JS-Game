@@ -34,7 +34,7 @@ function preload() { // function to preload my sprites
 }
 
 function setup() { // fucntion to set up the game
-   createCanvas(1000,620)
+   createCanvas(940,620)
    player = new Player();
   
 
@@ -125,7 +125,7 @@ function runGame() { //running the game, showing the characters and setting the 
     if (player.passes(spike)) { //statememnt that adds the players score when passing 
       score++;
     }
-    if (score > 20) { //to bring up the winning screen when reaching score of 20 or more
+    if (score > 19) { //to bring up the winning screen when reaching score of 20 or more
       gameWin();
     }
   }
